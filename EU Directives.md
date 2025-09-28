@@ -8,7 +8,7 @@ Each file is named after the **CELEX number** of the directive, e.g. `transposit
 
 ## 📑 File List
 
-| File name | Directive | Title | Link |
+| EURLEX Code | Directive | Title | Link |
 |-----------|-----------|-------|------|
 | `32003L0096` | 2003/96/EC | Taxation of energy products and electricity | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2003/96/oj/eng) |
 | `32004L0101` | 2004/101/EC | EU ETS – Kyoto project mechanisms | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2004/101/oj/eng) |
