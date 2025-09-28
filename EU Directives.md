@@ -10,20 +10,20 @@ Each file is named after the **CELEX number** of the directive, e.g. `transposit
 
 | File name | Directive | Title | Link |
 |-----------|-----------|-------|------|
-| `transposition_32003L0096.csv` | 2003/96/EC | Taxation of energy products and electricity | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2003/96/oj/eng) |
-| `transposition_32004L0101.csv` | 2004/101/EC | EU ETS – Kyoto project mechanisms | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2004/101/oj/eng) |
-| `transposition_32009L0028.csv` | 2009/28/EC | Promotion of renewable energy (RED I) | [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32009L0028) |
-| `transposition_32009L0029.csv` | 2009/29/EC | EU ETS reform | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2009/29/oj/eng) |
-| `transposition_32010L0031.csv` | 2010/31/EU | Energy performance of buildings (EPBD recast) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2010/31/oj/eng) |
-| `transposition_32018L0410.csv` | 2018/410/EU | EU ETS & Market Stability Reserve | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2018/410/oj/eng) |
-| `transposition_32018L0844.csv` | 2018/844/EU | Amending EPBD and Energy Efficiency Directive | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2018/844/oj/eng) |
-| `transposition_32018L2001.csv` | 2018/2001/EU | Renewable Energy Directive (RED II) | [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32018L2001) |
-| `transposition_32018L2002.csv` | 2018/2002/EU | Energy Efficiency Directive (amending 2012/27/EU) | [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32018L2002) |
-| `transposition_32023L0958.csv` | 2023/958/EU | EU ETS – Aviation | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/958/oj/eng) |
-| `transposition_32023L0959.csv` | 2023/959/EU | EU ETS – Maritime & reforms | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/959/oj/eng) |
-| `transposition_32023L1791.csv` | 2023/1791/EU | Energy Efficiency Directive (recast) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/1791/oj/eng) |
-| `transposition_32023L2413.csv` | 2023/2413/EU | Renewable Energy Directive (RED III) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/2413/oj/eng) |
-| `transposition_32024L1275.csv` | 2024/1275/EU | Energy performance of buildings (EPBD recast) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2024/1275/oj/eng) |
+| `32003L0096` | 2003/96/EC | Taxation of energy products and electricity | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2003/96/oj/eng) |
+| `32004L0101` | 2004/101/EC | EU ETS – Kyoto project mechanisms | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2004/101/oj/eng) |
+| `32009L0028` | 2009/28/EC | Promotion of renewable energy (RED I) | [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32009L0028) |
+| `32009L0029` | 2009/29/EC | EU ETS reform | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2009/29/oj/eng) |
+| `32010L0031` | 2010/31/EU | Energy performance of buildings (EPBD recast) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2010/31/oj/eng) |
+| `32018L0410` | 2018/410/EU | EU ETS & Market Stability Reserve | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2018/410/oj/eng) |
+| `32018L0844` | 2018/844/EU | Amending EPBD and Energy Efficiency Directive | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2018/844/oj/eng) |
+| `32018L2001` | 2018/2001/EU | Renewable Energy Directive (RED II) | [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32018L2001) |
+| `32018L2002` | 2018/2002/EU | Energy Efficiency Directive (amending 2012/27/EU) | [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32018L2002) |
+| `32023L0958` | 2023/958/EU | EU ETS – Aviation | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/958/oj/eng) |
+| `32023L0959` | 2023/959/EU | EU ETS – Maritime & reforms | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/959/oj/eng) |
+| `32023L1791` | 2023/1791/EU | Energy Efficiency Directive (recast) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/1791/oj/eng) |
+| `32023L2413` | 2023/2413/EU | Renewable Energy Directive (RED III) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2023/2413/oj/eng) |
+| `32024L1275` | 2024/1275/EU | Energy performance of buildings (EPBD recast) | [EUR-Lex](https://eur-lex.europa.eu/eli/dir/2024/1275/oj/eng) |
 
 ---
 
