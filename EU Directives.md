@@ -27,18 +27,4 @@ Each file is named after the **CELEX number** of the directive, e.g. `transposit
 
 ---
 
-## 📊 Schema of the CSV files
-Each `transposition_*.csv` file includes the following columns:
-
-- `country` → ISO 3-letter code (e.g. FRA, DEU)  
-- `act_number` → national implementing act identifier  
-- `date_adopted` → adoption date of the national measure  
-- `title` → short description of the act  
-- `link` → EUR-Lex link to the national measure  
-
----
-
-## 🔗 Source
-All files were parsed/scraped from the **EUR-Lex National Implementing Measures (NIM)** pages for each directive.
-
-⚠️ *Note: CSV files may be large. For reproducibility, instructions and scraping scripts are provided in the `code/` folder. Only cleaned or reduced datasets may be shared here to respect size and licensing constraints.*
+By inserting the CELEX code of a directive into the provided Python script, you can automatically download all national implementing measures (NIMs) for that directive directly from EUR-Lex.
