@@ -1,12 +1,10 @@
 # 📂 Data: Transposition of EU Directives
 
-This folder contains **CSV files with national transposition measures** (NIM) for a selection of directives linked to the European Green Deal and EU climate/energy legislation.  
-
-Each file is named after the **CELEX number** of the directive, e.g. `transposition_32009L0028.csv`.
+This folder contains the list for a selection of directives linked to the European Green Deal and Fit for 55 package used in the anlysis.  
 
 ---
 
-## 📑 File List
+## 📑 Directive List
 
 | EURLEX Code | Directive | Title | Link |
 |-----------|-----------|-------|------|
