@@ -59,8 +59,8 @@ Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-de
 
 ### 7. **Government Dataset (with manifesto weights)**  
 Notebook: [datagov_manifesto.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/datagov_manifesto.ipynb) 
-- Matches governments with party positions (DataGov + Manifesto Project).  
-- ⚠️ Raw **DataGov** data were incomplete → missing governments were **added manually**.  
+- Matches governments with party positions ([DataGov](https://parlgov.fly.dev/) + [Manifesto Project](https://manifesto-project.wzb.eu/datasets/MPDS2025a).  
+- ⚠️ Raw **DataGov** data were incomplete and missing governments were **added manually**.  
 - A cleaned dataset [aggregated_governments_with_weighted_avg.csv](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/aggregated_governments_with_weighted_avg.csv) is already available on GitHub.
 - This allows skipping the notebook and go directly to the next step.  
 
