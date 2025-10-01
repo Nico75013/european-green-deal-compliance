@@ -1,4 +1,4 @@
-# Delivering the European Green Deal: EU Governance, Compliance, and Economic Impacts
+# Delivering the European Green Deal: EU Governance and Compliance.
 
 **Master’s Thesis** – University of Milan (EPS)  
 Author: Nicolò Marchini  
@@ -8,10 +8,11 @@ Year: 2025
 
 ---
 ## 📂 Repository Content
-- `code/` → scripts for data collection, cleaning, and survival models  
-- `data/` → structured into `raw/` and `processed/` (cleaned, shareable datasets)  
-- `figures/` → regression outputs  
-- `docs/` → Thesis, executive summary
+- `code/`  
+   - `python scripts/` → Python scripts and notebooks for scraping, cleaning, merging, and building the dataset.  
+   - `do files/` → Stata do-files for harmonizing Eurobarometer data, generating the final `.dta` dataset, **and performing regressions**.  
+- `data/` → only **lightweight essential CSVs** needed to reproduce the workflow (large raw datasets excluded due to GitHub storage limits).  
+- `figures/` → regression outputs and visualizations.  
 
 ## Research Question
 How do EU member states comply with the European Green Deal?  
