@@ -28,49 +28,45 @@ Notebook: `dataframe_build.ipynb`
 - Prepares the transposition panel across EU27.  
 
 ---
+
 ### 3. **Media Salience (Media Cloud)**  
+### 4. **Relative Climate Salience (RCM, Google Trends)**  
 Notebook: `media_salience_rcm.ipynb`  
-- Builds **annual media salience indicators**:  
-  - *Media salience (MC)*  
-  - *Climate articles (MC)*  
-  - *Total articles (MC)*  
-- Outputs: one file per country (`MediaSalience_<country>.csv`).  
+- Builds two sets of indicators:  
+  - **Media Salience (MC)**: Media salience, climate articles, total articles (from Media Cloud).  
+  - **Relative Climate Salience (RCM)**: Climate salience / Economy salience (from Google Trends).  
+- Outputs:  
+  - `MediaSalience_<country>.csv` (Media Cloud)  
+  - `RCM_<country>.csv` (Google Trends)
+    
+---
+### 5. **Merge Media Salience with Directives**  
+Notebook: `dataframe_build.ipynb`  
+- Requires the **master directives dataset** produced earlier in the same notebook (e.g., `gd_ds_transposition.csv`).  
+- Merges Media Cloud files: `MediaSalience_<country>.csv`.  
+- **Output:** `gd_ds_transposition_with_mediacloud.csv`.
 
 ---
 
-### 4. **Government Dataset (with manifesto weights)**  
+### 6. **Merge RCM with Directives**  
+Notebook: `dataframe_build.ipynb`  
+- Requires the dataset from Step 5: `gd_ds_transposition_with_mediacloud.csv`.  
+- Merges Google Trends RCM files: `RCM_<country>.csv`.  
+- **Output:** `gd_ds_transposition_mediacloud_rcm.csv`.
+
+---
+
+### 7. **Government Dataset (with manifesto weights)**  
 Notebook: `datagov_manifesto.ipynb`  
 - Matches governments with party positions (DataGov + Manifesto Project).  
 - ⚠️ Raw **DataGov** data were incomplete → missing governments were **added manually**.  
 - A cleaned dataset [aggregated_governments_with_weighted_avg.csv](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/aggregated_governments_with_weighted_avg.csv) is already available on GitHub.
-- A cleaned dataset [aggregated_governments_with_weighted_avg.csv](data/aggregated_governments_with_weighted_avg.csv) is already available on GitHub.
-- This allows skipping the notebook if reproducibility is not required.  
-
----
-
-### 5. **Merge Media Salience with Directives**  
-Script: `merge_media_salience.py`  
-- Requires that **Media Salience files** have been generated.  
-- Produces: `gd_ds_transposition_with_mediacloud.csv`.  
-
----
-
-### 6. **Relative Climate Salience (RCM, Google Trends)**  
-Script: `rcm_builder.py`  
-- Computes **RCM = Climate salience / Economy salience** from Google Trends.  
-- Outputs: one file per country (`RCM_<country>.csv`).  
-
----
-
-### 7. **Merge RCM with Directives**  
-Script: `merge_rcm_with_transposition.py`  
-- Combines directive dataset with Google Trends RCM indicators.  
-- Produces: `gd_ds_transposition_mediacloud_rcm.csv`.  
+- This allows skipping the notebook and go directly to the next step.  
 
 ---
 
 ### 8. **Add Governments to Directives**  
-Script: `merge_directives_with_govs.py`  
+Notebook: `dataframe_build.ipynb`  
 - Matches each directive with the **government in power** at publication date.  
 - Uses the pre-cleaned dataset [aggregated_governments_with_weighted_avg.csv]([https://github.com/USERNAME/REPO/blob/main/data/aggregated_governments_with_weighted_avg.csv](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/aggregated_governments_with_weighted_avg.csv)) 
 - Produces: `gd_ds_transposition_with_govs.csv`.  
@@ -78,7 +74,7 @@ Script: `merge_directives_with_govs.py`
 ---
 
 ### 9. **Prepare Dataset for Stata**  
-Script: `prepare_stata_dataset.py`  
+Notebook: `dataframe_build.ipynb`  
 - Creates shortened variable names (Stata limitation).  
 - Flags **infringement procedures**.  
 - Extracts **directive short names**.  
@@ -90,7 +86,7 @@ Script: `prepare_stata_dataset.py`
 
 #### 10.1 Harmonization (Stata Do-files)  
 - Raw Eurobarometer data downloaded from [GESIS Eurobarometer](https://www.gesis.org/en/eurobarometer-data-service/survey-series/topics#:~:text=Natural,-Resources%3A%20Energy).  
-- Stata do-files extract and harmonize climate risk perception indicators (`climate_risk_perception`).  
+- Stata do-file extract and harmonize climate risk perception indicators (`climate_risk_perception`).  
 - Outputs: harmonised CSVs per wave (2007–2022).  
 
 #### 10.2 Merge Harmonised CSVs  
@@ -99,7 +95,7 @@ Notebook: `EB_merger.ipynb`
 - Produces: `EB_merged_2007_2022.csv`.  
 
 #### 10.3 Interpolation Panel  
-Script: `EB_crp_interpolation.py`  
+Notebook: `EB_merger.ipynb`  
 - Builds a **balanced panel (2004–2025)**.  
 - Variables:  
   - `crp_raw` – observed survey values (survey years only)  
@@ -109,8 +105,8 @@ Script: `EB_crp_interpolation.py`
 ---
 
 ### 11. **Merge Directives with Eurobarometer CRP**  
-Script: `merge_transposition_with_ebcrps.py`  
-- Final merge: directives × governments × salience × CRP.  
+Notebook: `dataframe_build.ipynb`  
+- Final merge: `gd_ds_transposition_with_govs_infr.csv` × `EB_CRPs_interp.csv`.  
 - Exports an **Excel file** for Stata (to avoid numeric/string issues).  
 - Produces: `gd_ds_transposition_for_stata.xlsx`.  
 
