@@ -118,7 +118,7 @@ Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-de
 
 ---
 
-## ✅ Final Output  
+## Final Output  
 A **Stata-ready dataset** containing:  
 - Directive metadata and compliance deadlines.  
 - Government political indicators.  
@@ -130,7 +130,7 @@ This dataset supports regression analyses of **EU Green Deal compliance and tran
 
 ---
 
-### 🔹 Final Step in Stata  
+### Final Step in Stata  
 Once the Excel file is produced, import it into Stata and run the following do-file:  
 
 [`build_GD_dataset.do`](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/do%20files/build_GD_dataset.do)  
