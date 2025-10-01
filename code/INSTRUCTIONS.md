@@ -72,7 +72,7 @@ Script: `merge_rcm_with_transposition.py`
 ### 8. **Add Governments to Directives**  
 Script: `merge_directives_with_govs.py`  
 - Matches each directive with the **government in power** at publication date.  
-- Uses the pre-cleaned dataset [aggregated_governments_with_weighted_avg.csv](https://github.com/USERNAME/REPO/blob/main/data/aggregated_governments_with_weighted_avg.csv) 
+- Uses the pre-cleaned dataset [aggregated_governments_with_weighted_avg.csv]([https://github.com/USERNAME/REPO/blob/main/data/aggregated_governments_with_weighted_avg.csv](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/aggregated_governments_with_weighted_avg.csv)) 
 - Produces: `gd_ds_transposition_with_govs.csv`.  
 
 ---
