@@ -10,7 +10,7 @@ clear all
 
 * Import the dataset (adjust path if needed)
 import excel ///
-    "/Users/nicolomarchini/Documents/Università/Magistrale/Tesi Magistrale/Merged Datasets/gd_ds_transposition_for_stata.xlsx", ///
+    "insert/your/path/gd_ds_transposition_for_stata.xlsx", ///
     firstrow clear
 	
 ****************************************************
@@ -150,4 +150,4 @@ label variable ebwave                 "Eurobarometer wave"
 label variable crp                    "Comparative responsiveness  (forward fill, backward substituted with youngest value)"
 
 
-save "/Users/nicolomarchini/Documents/Università/Magistrale/Tesi Magistrale/Merged Datasets/gd_transposition_ds_final.dta", replace
+save "insert/your/path/gd_transposition_ds_final.dta", replace
