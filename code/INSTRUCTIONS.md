@@ -28,23 +28,23 @@ Notebook: `dataframe_build.ipynb`
 - Prepares the transposition panel across EU27.  
 
 ---
-
-### 3. **Government Dataset (with manifesto weights)**  
-Notebook: `datagov_manifesto.ipynb`  
-- Matches governments with party positions (DataGov + Manifesto Project).  
-- ⚠️ Raw **DataGov** data were incomplete → missing governments were **added manually**.  
-- A cleaned dataset `aggregated_governments_with_weighted_avg.csv` is already available on GitHub.  
-- This allows skipping the notebook if reproducibility is not required.  
-
----
-
-### 4. **Media Salience (Media Cloud)**  
+### 3. **Media Salience (Media Cloud)**  
 Notebook: `media_salience_rcm.ipynb`  
 - Builds **annual media salience indicators**:  
   - *Media salience (MC)*  
   - *Climate articles (MC)*  
   - *Total articles (MC)*  
 - Outputs: one file per country (`MediaSalience_<country>.csv`).  
+
+---
+
+### 4. **Government Dataset (with manifesto weights)**  
+Notebook: `datagov_manifesto.ipynb`  
+- Matches governments with party positions (DataGov + Manifesto Project).  
+- ⚠️ Raw **DataGov** data were incomplete → missing governments were **added manually**.  
+- A cleaned dataset [aggregated_governments_with_weighted_avg.csv](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/aggregated_governments_with_weighted_avg.csv) is already available on GitHub.
+- A cleaned dataset [aggregated_governments_with_weighted_avg.csv](data/aggregated_governments_with_weighted_avg.csv) is already available on GitHub.
+- This allows skipping the notebook if reproducibility is not required.  
 
 ---
 
