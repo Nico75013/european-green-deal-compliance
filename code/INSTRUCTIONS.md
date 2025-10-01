@@ -42,14 +42,16 @@ Notebook: [media_salience_rcm.ipynb](https://github.com/Nico75013/european-green
     
 ---
 ### 5. **Merge Media Salience with Directives**  
-Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)- Requires the **master directives dataset** produced earlier in the same notebook (e.g., `gd_ds_transposition.csv`).  
+Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)
+- Requires the **master directives dataset** produced earlier in the same notebook (e.g., `gd_ds_transposition.csv`).  
 - Merges Media Cloud files: `MediaSalience_<country>.csv`.  
 - **Output:** `gd_ds_transposition_with_mediacloud.csv`.
 
 ---
 
 ### 6. **Merge RCM with Directives**  
-Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)- Requires the dataset from Step 5: `gd_ds_transposition_with_mediacloud.csv`.  
+Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)
+- Requires the dataset from Step 5: `gd_ds_transposition_with_mediacloud.csv`.  
 - Merges Google Trends RCM files: `RCM_<country>.csv`.  
 - **Output:** `gd_ds_transposition_mediacloud_rcm.csv`.
 
@@ -65,14 +67,18 @@ Notebook: [datagov_manifesto.ipynb](https://github.com/Nico75013/european-green-
 ---
 
 ### 8. **Add Governments to Directives**  
-Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)- Matches each directive with the **government in power** at publication date.  
+Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)
+- Requires the dataset from Step 6: `gd_ds_transposition_mediacloud_rcm.csv` and `aggregated_governments_with_weighted_avg.csv`.  
+- Matches each directive with the **government in power** at publication date.  
 - Uses the pre-cleaned dataset [aggregated_governments_with_weighted_avg.csv]([https://github.com/USERNAME/REPO/blob/main/data/aggregated_governments_with_weighted_avg.csv](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/aggregated_governments_with_weighted_avg.csv)) 
 - Produces: `gd_ds_transposition_with_govs.csv`.  
 
 ---
 
 ### 9. **Prepare Dataset for Stata**  
-Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)- Creates shortened variable names (Stata limitation).  
+Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)
+- Requires the dataset from Step 8: `gd_ds_transposition_with_govs.csv`.
+- Creates shortened variable names (Stata limitation).  
 - Flags **infringement procedures**.  
 - Extracts **directive short names**.  
 - Produces: `gd_ds_transposition_with_govs_infr.csv`.  
@@ -82,7 +88,7 @@ Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-de
 ### 10. **Eurobarometer – Climate Risk Perception (CRP)**  
 Since **step 10 (Eurobarometer – Climate Risk Perception, CRP)** is long and requires downloading large raw files,  
 the final output `EB_CRPs_interp.csv`, which can be directly merged with `gd_ds_transposition_with_govs_infr.csv`, 
-is already available here.
+is already available [here](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/EB_CRPs_interp.csv).
 
 #### 10.1 Harmonization (Stata Do-files)  
 - Raw Eurobarometer data downloaded from [GESIS Eurobarometer](https://www.gesis.org/en/eurobarometer-data-service/survey-series/topics#:~:text=Natural,-Resources%3A%20Energy).  
@@ -90,22 +96,23 @@ is already available here.
 - Outputs: harmonised CSVs per wave (2007–2022).  
 
 #### 10.2 Merge Harmonised CSVs  
-Notebook: `EB_merger.ipynb`  
+Notebook: [EB_merger.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/EB_merger.ipynb) 
 - Merges all harmonised Eurobarometer CSVs.  
 - Produces: `EB_merged_2007_2022.csv`.  
 
 #### 10.3 Interpolation Panel  
-Notebook: `EB_merger.ipynb`  
+Notebook: [EB_merger.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/EB_merger.ipynb) 
 - Builds a **balanced panel (2004–2025)**.  
 - Variables:  
   - `crp_raw` – observed survey values (survey years only)  
   - `crp_interp` – interpolated values (2004–2006 filled from 2007)  
-- Produces: `EB_CRPs_interp.csv`.  
+- Produces: [EB_CRPs_interp.csv](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/EB_CRPs_interp.csv)
 
 ---
 
 ### 11. **Merge Directives with Eurobarometer CRP**  
-Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)- Final merge: `gd_ds_transposition_with_govs_infr.csv` × `EB_CRPs_interp.csv`.  
+Notebook: [dataframe_build.ipynb](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/python%20scripts/dataframe_build.ipynb)
+- Final merge: `gd_ds_transposition_with_govs_infr.csv` × `EB_CRPs_interp.csv`.  
 - Exports an **Excel file** for Stata (to avoid numeric/string issues).  
 - Produces: `gd_ds_transposition_for_stata.xlsx`.  
 
