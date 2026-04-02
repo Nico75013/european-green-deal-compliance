@@ -4,6 +4,11 @@ This repository contains scripts and notebooks to build a **panel dataset** on E
 
 The dataset is progressively constructed by chaining together the following scripts. Each step must be run in the **exact order**.  
 
+> [!IMPORTANT]
+> **This entire construction part can be skipped** as the final cleaned dataset is already provided as a `.dta` file at [gd_transposition_ds_v1.3.dta](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/gd_transposition_ds_v1.3.dta). 
+> 
+> If you wish to jump directly to the econometric analysis, you can immediately run the regressions by following the instructions in the [Stata Research Workflow](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/Stata%20Research%20Workflow.md).
+
 ---
 
 ## ⚙️ **Requirements**  
