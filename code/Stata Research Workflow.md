@@ -2,6 +2,9 @@
 
 This directory contains the Stata scripts (`.do` files) used for data processing, descriptive statistics, and **Survival Analysis** regarding the transposition of European Green Deal directives.
 
+> [!TIP]
+> For users who wish to see the end-to-end process of how the original dataset was built (from Python scraping to merging political and social indicators), please follow the instructions in the [Dataset Construction Workflow](https://github.com/Nico75013/european-green-deal-compliance/blob/main/code/Dataset%20Construction%20Workflow.md).
+
 ## 📂 Script Pipeline & Logic
 
 The analysis follows a sequential pipeline from raw data to advanced econometric modeling.
