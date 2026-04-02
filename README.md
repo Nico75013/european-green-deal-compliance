@@ -1,58 +1,59 @@
-# Delivering the European Green Deal: EU Governance and Compliance.
+# Delivering the European Green Deal: EU Governance and Compliance
 
 **Master’s Thesis** – University of Milan (EPS)  
-Author: Nicolò Marchini  
-Supervisor: Prof. Fabio Franchino  
-Year: 2025  
-⚠️ *Work in progress — repository and analysis are being continuously updated.*
+**Author:** Nicolò Marchini  
+**Supervisor:** Prof. Fabio Franchino  
+**Academic Year:** 2024-2025  
 
 ---
+
 ## 📂 Repository Content
-- `code/`  
-   - `python scripts/` → Python scripts and notebooks for scraping, cleaning, merging, and building the dataset.  
-   - `do files/` → Stata do-files for harmonizing Eurobarometer data, generating the final `.dta` dataset, **and performing regressions**.  
-- `data/` → only **lightweight essential CSVs** needed to reproduce the workflow (large raw datasets excluded due to GitHub storage limits).  
-- `figures/` → regression outputs and visualizations.  
 
-## Research Question
-How do EU member states comply with the European Green Deal?  
-I study the **transposition of EU directives** using survival analysis (Cox proportional hazards model), focusing on political and institutional factors that influence delays.
+- **`code/`**
+    - **`python scripts/`**: Notebooks for scraping **EUR-Lex (NIM)**, cleaning, and merging heterogeneous datasets including ParlGov, Manifesto Project, Eurostat, and Google Trends.
+    - **`do files/`**: Stata scripts for harmonizing Eurobarometer data, generating the final `.dta` dataset, and performing econometric regressions.
+- **`data/`**: Contains the final cleaned dataset ready for analysis ([`gd_transposition_ds_v1.3.dta`](https://github.com/Nico75013/european-green-deal-compliance/blob/main/data/gd_transposition_ds_v1.3.dta)).
+- **`tables/`**: Comprehensive regression output tables (Latex/HTML/Excel format), including Hazard Ratios, Standard Errors, and Significance levels for the Cox proportional hazard models.
+- **`figures/`**: **Kaplan-Meier** survival curves and comparative visualizations of Member State performance generated from the analysis.
 
 ---
 
- ## 🛠️ Methods
-The core of this project is **collecting, cleaning, and integrating multiple raw datasets** with Python to build a novel dataset on compliance with the European Green Deal.  
+## 🔍 Research Question
 
-- **Directives & compliance data**:  
-  - Raw transposition data scraped from **EUR-Lex** (NIM pages)
-- **Political context**:  
-  - Government composition & party data from **ParlGov** and **Manifesto Project**  
-- **Media & salience**:  
-  - Public attention to climate and Green Deal issues from **Google Trends** and **Media Cloud**  
-- **Public opinion**:  
-  - Eurobarometer survey data (downloaded via **GESIS**)  
-- **Data wrangling in Python**:  
-  - Parsing HTML from EUR-Lex  
-  - Standardizing country codes, party identifiers, and directive IDs  
-  - Merging heterogeneous datasets into a unified structure  
-  - Creating time-to-event variables for transposition delays  
----
-
-## Key Findings
-*(Preliminary — subject to revision as the work progresses)*  
-- Institutional design and political coalitions strongly affect transposition times  
-- Amending directives behave differently from new ones  
-- The Commission’s enforcement role matters more than expected  
+**"Has the Green Deal sped up compliance?"** This research answers this question through **Survival Analysis** (Cox proportional hazards models), investigating how institutional, political, and administrative factors influence the timing of EU directive transposition.
 
 ---
 
-## Why it Matters
-The European Green Deal’s success depends not only on ambitious targets but on **timely national implementation**.  
-This research provides insights into the **political economy of compliance**, relevant for policy evaluation, EU governance, and climate politics.
+## 🛠️ Methodology & Data Pipeline
+
+The core of this project is a novel dataset built by integrating multiple raw sources:
+1. **Compliance Data**: Automated scraping of national implementation measures (NIM) from EUR-Lex.
+2. **Political Context**: Government composition and ideological stances from **ParlGov** and the **Manifesto Project**.
+3. **Media & Public Salience**: Climate attention tracked via **Google Trends** and **Media Cloud**.
+4. **Public Opinion**: Longitudinal climate concern data from **Eurobarometer** surveys (GESIS), harmonized through linear interpolation.
+5. **Governance Quality**: World Bank **Worldwide Governance Indicators** (WGI) used to measure administrative effectiveness and political stability.
 
 ---
 
-## Contact
-If you’re interested in this work, feel free to reach out:  
-📧 nicolo.marchini@studenti.unimi.it
-🔗 www.linkedin.com/in/nicolò-marchini-189581252 
+## 📈 Key Findings
+
+Contrary to initial expectations, the empirical analysis reveals:
+
+* **Post-2019 Slowdown**: Directives adopted after the launch of the Green Deal are transposed up to **30 times more slowly** than those before 2019. This reflects increased technical complexity and high politicization.
+* **Administrative Capacity**: Countries with efficient bureaucracies and stable political systems transpose directives roughly **twice as fast** as Member States with weaker structures.
+* **Ideology Matters**: A cabinet's orientation on the **Liberty-Authority** dimension is a significant predictor; more authoritarian cabinets tend to delay transposition.
+* **The Economic Factor (GDP Paradox)**: While higher **GDP per capita** is statistically significant, its impact on speed is minimal. Economic wealth alone does not guarantee faster compliance; its effect is largely mediated by **bureaucratic quality** and state capacity.
+* **Public Concern Paradox**: Higher public concern about climate change is associated with **slower transposition**, as governments may approach these sensitive requirements more cautiously to align them with national strategies.
+
+---
+
+## 🌍 Why it Matters
+
+The European Green Deal’s success depends not only on ambitious targets but on **timely national implementation**. This research provides insights into the **political economy of compliance**, demonstrating that the Green Deal has transformed transposition from a technical exercise into a **strategic political test** of EU governance.
+
+---
+
+## 📧 Contact
+
+- **Email:** nicolo.marchini@studenti.unimi.it
+- **LinkedIn:** [nicolò-marchini](https://www.linkedin.com/in/nicolò-marchini-189581252)
